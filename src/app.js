@@ -24,7 +24,13 @@ const levels = [
 let stopTest = false;
 
 async function beepTest() {
-  document.getElementById("results").innerHTML = "";
+  // Clear previous results and create new results container
+  clearResults();
+  const resultsContainer = document.createElement('ul');
+  resultsContainer.id = 'results';
+  resultsContainer.className = 'list-group mb-4';
+  document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-grid'));
+
   stopTest = false;
   await playAudio("startingInAudio");
 
@@ -33,7 +39,10 @@ async function beepTest() {
     const level = levels[i];
     for (let j = 1; j <= level.shuttles; j++) {
       if (stopTest) break;
-      document.getElementById("results").innerHTML += `<li class="list-group-item">Level: ${level.level}, Shuttle: ${j}</li>`;
+      const listItem = document.createElement('li');
+      listItem.className = 'list-group-item';
+      listItem.textContent = `Level: ${level.level}, Shuttle: ${j}`;
+      resultsContainer.appendChild(listItem);
       await playAudio("beepAudio");
       await new Promise(resolve => setTimeout(resolve, level.interval * 1000));
     }
@@ -57,6 +66,11 @@ document.getElementById("endButton").addEventListener("click", () => {
   document.getElementById("finishedAudio").play();
 });
 
-document.getElementById("clearButton").addEventListener("click", () => {
-  document.getElementById("results").innerHTML = "";
-});
+document.getElementById("clearButton").addEventListener("click", clearResults);
+
+function clearResults() {
+  const resultsContainer = document.getElementById("results");
+  if (resultsContainer) {
+    resultsContainer.remove();
+  }
+}
