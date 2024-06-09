@@ -29,11 +29,13 @@ async function beepTest() {
   const resultsContainer = document.createElement('ul');
   resultsContainer.id = 'results';
   resultsContainer.className = 'list-group mb-4';
-  document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-grid'));
+
 
   stopTest = false;
-  await playAudio("startingInAudio");
 
+  await playAudio("startingInAudio");
+  
+  document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-grid'));
   for (let i = 0; i < levels.length; i++) {
     if (stopTest) break;
     const level = levels[i];
