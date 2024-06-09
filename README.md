@@ -39,3 +39,6 @@ To get started with the project, follow these steps:
 
 
 You can see it in action at [https://andyj.github.io/free-beep-test-timer/src/](https://andyj.github.io/free-beep-test-timer/src/)
+
+### Thanks to
+- https://realfavicongenerator.net/
