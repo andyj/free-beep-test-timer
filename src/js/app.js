@@ -35,7 +35,7 @@ async function beepTest() {
 
   await playAudio("startingInAudio");
   
-  document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-grid'));
+  document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-flex'));
   for (let i = 0; i < levels.length; i++) {
     if (stopTest) break;
     const level = levels[i];
