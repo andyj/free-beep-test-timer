@@ -1,4 +1,4 @@
-# Free 10m Beep Test
+# Free Beep Test
 
 This is a simple one-page web application to run a 10-meter beep test. Created because I didn't want to use a paid app or one with adverts.
 
