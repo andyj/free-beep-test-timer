@@ -3,7 +3,7 @@
 # Created using MacOS and Lame
 # $ brew install lame
 # $ chmod +x convert_say_to_mp3.sh
-# ./convert_say_to_mp3.sh
+# ./voices.sh
 
 # Generate the AIFF file for the countdown message
 say -o startingin.aiff "Starting in 5.4.3.2.1"
