@@ -1,6 +1,6 @@
 # Free Beep Test
 
-This is a simple one-page web application to run a 10-meter beep test. Created because I didn't want to use a paid app or one with adverts.
+This is a simple one-page web application to run a beep test. Created because I didn't want to use a paid app or one with adverts.
 
 It's very basic, and uses Bootstrap 5 for styling and includes buttons to start, end, and clear the test results. It also plays specific audio files during the test.
 
