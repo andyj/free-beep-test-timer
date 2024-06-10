@@ -30,12 +30,12 @@ async function beepTest() {
   resultsContainer.id = 'results';
   resultsContainer.className = 'list-group mb-4';
 
-
   stopTest = false;
 
   await playAudio("startingInAudio");
   
   document.querySelector('.container').insertBefore(resultsContainer, document.querySelector('.d-flex'));
+
   for (let i = 0; i < levels.length; i++) {
     if (stopTest) break;
     const level = levels[i];
@@ -46,7 +46,7 @@ async function beepTest() {
       listItem.textContent = `Level: ${level.level}, Shuttle: ${j}`;
       resultsContainer.appendChild(listItem);
       await playAudio("beepAudio");
-      await new Promise(resolve => setTimeout(resolve, level.interval * 1000));
+      await new Promise(resolve => setTimeout(resolve, (level.interval * 1000)-950));
     }
   }
 
