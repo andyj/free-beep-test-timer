@@ -4,10 +4,9 @@ const urlsToCache = [
   'index.html',
   'css/styles.css',
   'js/app.js',
-  'mp3s/startingin.mp3'
-  'mp3s/beep.mp3'
+  'mp3s/startingin.mp3',
+  'mp3s/beep.mp3',
   'mp3s/finished.mp3'
-  // Add any other files you want to cache
 ];
 
 self.addEventListener('install', event => {
