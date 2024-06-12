@@ -38,7 +38,7 @@ To get started with the project, follow these steps:
 - *Clear Results:* Clears the results list displayed on the page.
 
 
-You can see it in action at [https://andyj.github.io/free-beep-test-timer/src/](https://andyj.github.io/free-beep-test-timer/src/)
+You can see it in action at [https://andyj.github.io/free-beep-test-timer/](https://andyj.github.io/free-beep-test-timer/)
 
 ### Thanks to
 - https://realfavicongenerator.net/
