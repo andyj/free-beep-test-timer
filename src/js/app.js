@@ -1,23 +1,3 @@
-
-// Check if the browser supports service workers
-if ('serviceWorker' in navigator) {
-  // Wait for the window to load
-  window.addEventListener('load', () => {
-    // Register the service worker
-    navigator.serviceWorker.register('/service-worker.js').then(
-      registration => {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      },
-      error => {
-        // Registration failed
-        console.log('ServiceWorker registration failed: ', error);
-      }
-    );
-  });
-}
-
-
 const levels = [
   { level: 1, shuttles: 7, interval: 9.00 },
   { level: 2, shuttles: 8, interval: 8.50 },
@@ -42,6 +22,26 @@ const levels = [
 ];
 
 let stopTest = false;
+
+
+// Check if the browser supports service workers
+if ('serviceWorker' in navigator) {
+  // Wait for the window to load
+  window.addEventListener('load', () => {
+    // Register the service worker
+    navigator.serviceWorker.register('/service-worker.js').then(
+      registration => {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      },
+      error => {
+        // Registration failed
+        console.log('ServiceWorker registration failed: ', error);
+      }
+    );
+  });
+}
+
 
 async function beepTest() {
   // Clear previous results and create new results container
