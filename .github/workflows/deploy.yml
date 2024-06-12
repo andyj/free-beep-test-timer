@@ -13,8 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build and Deploy
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: src # The folder the action should deploy.
+          clean: true # Optional: Clean the target branch before deployment
+          token: ${{ secrets.GITHUB_TOKEN }} # Use the GitHub token for authentication
