@@ -1,12 +1,11 @@
 const CACHE_NAME = 'beep-test-cache-v1';
 const urlsToCache = [
-  '/',
-  '../index.html',
-  '../css/styles.css',
-  './app.js',
-  '../mp3s/startingin.mp3',
-  '../mp3s/beep.mp3',
-  '../mp3s/finished.mp3'
+  'index.html',
+  'css/styles.css',
+  'js/app.js',
+  'mp3s/startingin.mp3',
+  'mp3s/beep.mp3',
+  'mp3s/finished.mp3'
 ];
 
 self.addEventListener('install', event => {
